@@ -32,10 +32,5 @@ ifneq ($(CGSI_ARCH),arm64)
 TARGET_DISABLE_FACEUNLOCK := true
 endif
 
-# GMS
-ifneq ($(CGSI_ARCH),arm64)
-WITH_GMS ?= false
-endif
-
 # Product properties
 include device/cgsi/common_product_properties.mk
