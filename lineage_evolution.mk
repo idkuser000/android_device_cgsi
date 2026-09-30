@@ -1,9 +1,11 @@
 CGSI_CUSTOM_ROM_NAME := Evolution-X
 CGSI_CUSTOM_ROM_BRANCH := cnb
 
-# FaceUnlock
+# disable incompatible dependencies on x86_64
 ifneq ($(CGSI_ARCH),arm64)
-TARGET_DISABLE_FACEUNLOCK := true
+PRODUCT_PACKAGES += \
+    FaceUnlock \
+    TurboAdapter
 endif
 
 # GMS
