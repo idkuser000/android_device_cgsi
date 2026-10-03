@@ -27,5 +27,8 @@ else
 $(call inherit-product, vendor/custom/config/common_full_tablet_wifionly.mk)
 endif
 
+# Fallback to AOSP setup because i deleted pixel's setupwizard
+PRODUCT_PACKAGES += Provision
+
 # Product properties
 include device/cgsi/common_product_properties.mk
