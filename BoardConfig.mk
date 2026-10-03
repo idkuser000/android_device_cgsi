@@ -1,5 +1,7 @@
 USES_DEVICE_CGSI := true
 
+BUILD_BROKEN_MISSING_REQUIRED_MODULES := true
+
 # Architecture
 ifeq ($(CGSI_ARCH),arm64)
 TARGET_ARCH := arm64
