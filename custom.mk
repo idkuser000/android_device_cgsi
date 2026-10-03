@@ -3,8 +3,8 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
-CGSI_CUSTOM_ROM_NAME := PixelOS-AOSP
-CGSI_CUSTOM_ROM_BRANCH := seventeen
+CGSI_CUSTOM_ROM_NAME := PixelOS
+CGSI_CUSTOM_ROM_BRANCH := 17.0
 
 # Import cgsi product variables
 include device/cgsi/import_product_vars.mk
@@ -25,13 +25,6 @@ ifeq ($(CGSI_DEVICE_TYPE),phone)
 $(call inherit-product, vendor/custom/config/common_full_phone.mk)
 else
 $(call inherit-product, vendor/custom/config/common_full_tablet_wifionly.mk)
-endif
-
-# disable incompatible dependencies on x86_64
-ifneq ($(CGSI_ARCH),x86_64)
-PRODUCT_PACKAGES += \
-    FaceUnlock \
-    TurboAdapter
 endif
 
 # Product properties
