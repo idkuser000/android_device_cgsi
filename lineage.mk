@@ -21,8 +21,8 @@ endif
 $(call inherit-product, device/cgsi/device.mk)
 
 # Evolution-X
-ifneq ($(wildcard vendor/lineage/config/evolution.mk),)
-include device/cgsi/lineage_evolution.mk
+ifeq ($(wildcard vendor/lineage/config/evolution.mk),)
+-include device/cgsi/lineage_evolution.mk
 endif
 
 # Inherit some common Lineage stuff.
