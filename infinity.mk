@@ -30,7 +30,6 @@ endif
 
 # Infinity-X Flags
 WITH_GAPPS := false
-INFINITY_BUILD_TYPE := UNOFFICIAL
 INFINITY_MAINTAINER := cgik
 
 # Product properties
